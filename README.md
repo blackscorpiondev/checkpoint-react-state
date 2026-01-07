@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Checkpoint React State
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application React démontrant l'utilisation des états (state) et des cycles de vie des composants.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Cette application est un profil utilisateur interactif qui illustre les concepts fondamentaux de React, notamment :
 
-### `npm start`
+- Gestion de l'état local avec `this.state`
+- Manipulation du state avec `this.setState`
+- Utilisation des méthodes de cycle de vie : `componentDidMount` et `componentWillUnmount`
+- Affichage conditionnel basé sur l'état
+- Timer qui compte le temps écoulé depuis le montage du composant
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Fonctionnalités
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Affichage/Masquage du profil** : Un bouton permet de basculer l'affichage des informations du profil
+- **Timer intégré** : Compte le nombre de secondes écoulées depuis le chargement de l'application
+- **Design moderne** : Interface utilisateur élégante avec animations et transitions fluides
+- **Profil personnalisé** : Affiche les informations d'une personne (nom, profession, bio et image)
 
-### `npm test`
+## Structure du Projet
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+checkpoint-react-state/
+├── public/                 # Fichiers statiques
+├── src/
+│   ├── App.js             # Composant principal de l'application
+│   ├── App.css            # Styles pour le composant App
+│   ├── index.js           # Point d'entrée de l'application
+│   └── index.css          # Styles globaux
+└── package.json           # Dépendances et scripts du projet
+```
 
-### `npm run build`
+## Technologies Utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React 19.2.3
+- React DOM 19.2.3
+- Create React App (configuration)
+- CSS3 (animations et transitions)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Démarrage Rapide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prérequis
 
-### `npm run eject`
+- Node.js (version 14 ou supérieure)
+- npm (version 6 ou supérieure)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clonez ce dépôt :
+```bash
+git clone https://github.com/votre-username/checkpoint-react-state.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Accédez au répertoire du projet :
+```bash
+cd checkpoint-react-state
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Installez les dépendances :
+```bash
+npm install
+```
 
-## Learn More
+### Lancement de l'application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Démarrez l'application en mode développement avec la commande :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+L'application s'ouvrira automatiquement dans votre navigateur à l'adresse [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Scripts Disponibles
 
-### Analyzing the Bundle Size
+- `npm start` : Lance l'application en mode développement
+- `npm test` : Lance les tests en mode watch
+- `npm run build` : Crée une version optimisée pour la production
+- `npm run eject` : Expose la configuration sous-jacente (opération irréversible)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Concepts React Démontrés
 
-### Making a Progressive Web App
+1. **State (état local)** : Utilisation de `this.state` pour stocker les données du composant
+2. **setState** : Modification de l'état avec `this.setState` pour déclencher un nouveau rendu
+3. **Méthodes de cycle de vie** :
+   - `componentDidMount` : Démarrage du timer après le montage du composant
+   - `componentWillUnmount` : Nettoyage du timer avant le démontage
+4. **Rendu conditionnel** : Affichage du profil uniquement si `montre` est `true`
+5. **Gestion des événements** : Utilisation de `onClick` pour basculer l'affichage du profil
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Auteur
 
-### Advanced Configuration
+Développé dans le cadre d'un exercice sur la gestion d'état dans React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
